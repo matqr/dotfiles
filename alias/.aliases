@@ -1,0 +1,17 @@
+## Git
+alias ga='git add'
+alias gs='git status'
+alias gu='git pull'
+alias gg='git graph'
+unalias gd
+alias gd='git diff'
+alias gD='git ls-files'
+  # Note that gs is also ghostscript
+alias ghostscript="/usr/local/bin/gs"
+
+## Jupyter
+alias jc="jupyter console"
+alias jl="jupyter lab"
+alias jco="jupyter nbconvert"
+alias jn="jupyter notebook"
+alias jn-b="jupyter notebook --no-browser"
