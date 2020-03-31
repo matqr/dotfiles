@@ -7,7 +7,7 @@
 # Dont link DS_Store files
 find . -name ".DS_Store" -exec rm {} \;
 
-PROGRAMS=(alias bash env git stow vim fish)
+PROGRAMS=(alias bash git stow vim fish)
 
 function backup_if_exists() {
     if [ -f $1 ];
@@ -23,7 +23,6 @@ function backup_if_exists() {
 # Clean common conflicts
 backup_if_exists ~/.bash_profile
 backup_if_exists ~/.bashrc
-backup_if_exists ~/.gitconfig
 
 for program in ${PROGRAMS[@]}; do
   stow -v $program
