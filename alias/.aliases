@@ -1,3 +1,10 @@
+function alias_if_exists() {
+  # Does the alias only if the aliased program is installed
+    if command -v $2 > /dev/null; then
+        alias "$1"="$2"
+    fi
+}
+
 ## Git
 alias ga='git add'
 alias gs='git status'
@@ -15,3 +22,31 @@ alias jl="jupyter lab"
 alias jco="jupyter nbconvert"
 alias jn="jupyter notebook"
 alias jn-b="jupyter notebook --no-browser"
+
+###########################################################################################################################
+
+# SECRET ALIASES
+if [ -f ~/.secret-aliases ]; then
+    source ~/.secret-aliases
+fi
+
+
+# LOCAL ALIASES
+if [ -f ~/.local-aliases ]; then
+    source ~/.local-aliases
+fi
+
+###########################################################################################################################
+
+# Shell dependent Alias (only zsh has global aliases)
+case $SHELL in
+*/zsh)
+   # assume Zsh
+   ;;
+*/bash)
+   # assume Bash
+   ;;
+*)
+   # assume something else
+   ;;
+esac

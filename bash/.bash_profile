@@ -1,10 +1,6 @@
-neofetch
-export CLICOLOR=1
-export LSCOLORS=ExFxCxDxBxegedabagacad
-export LANG=en_US
+# Some OSes like Ubuntu/Mac expect bash_profile
+# Redirect to bashrc
+if [ -f ~/.bashrc ]; then
+   source ~/.bashrc
+fi
 
-# added by Anaconda3 5.2.0 installer
-export PATH="/Users/matias/anaconda3/bin:$PATH"
-
-# added by Miniconda3 installer
-export PATH="/Users/matias/miniconda3/bin:$PATH"
