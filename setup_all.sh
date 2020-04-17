@@ -24,6 +24,7 @@ function backup_if_exists() {
 backup_if_exists ~/.bash_profile
 backup_if_exists ~/.bashrc
 backup_if_exists ~/.config/fish/config.fish
+backup_if_exists ~/.vimrc
 
 for program in ${PROGRAMS[@]}; do
   stow -v $program
