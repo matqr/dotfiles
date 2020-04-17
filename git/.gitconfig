@@ -1,3 +1,8 @@
 [user]
     name = Matias Quintana
     email = matias.quintana.r@gmail.com
+[push]
+	default = simple
+[core]
+	editor = vim
+	excludesfile = ~/.gitignore_global

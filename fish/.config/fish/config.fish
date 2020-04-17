@@ -1,5 +1,5 @@
 source ~/.profile;clear;
-set -gx LSCOLORS gxdxcxdxbxegedabaggxgx
+set -xU LSCOLORS gxdxcxdxbxegedabaggxgx
 LS >/dev/null
 set PATH /Users/matias/miniconda3/bin $PATH
 source "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
