@@ -7,7 +7,7 @@
 # Dont link DS_Store files
 find . -name ".DS_Store" -exec rm {} \;
 
-PROGRAMS=(alias bash git stow vim)
+PROGRAMS=(git stow vim)
 
 function backup_if_exists() {
     if [ -f $1 ];
