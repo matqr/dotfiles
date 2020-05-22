@@ -21,8 +21,6 @@ function backup_if_exists() {
 }
 
 # Clean common conflicts
-backup_if_exists ~/.bash_profile
-backup_if_exists ~/.bashrc
 backup_if_exists ~/.vimrc
 
 for program in ${PROGRAMS[@]}; do
