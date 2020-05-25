@@ -14,7 +14,7 @@
 set nocompatible
 
 " Turn on syntax highlighting.
-"syntax on
+syntax on
 
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -27,6 +27,8 @@ syntax enable "enable syntax processing
 set tabstop=4       " number of visual spaces per TAB
 set softtabstop=4   " number of spaces in tab when editing
 set expandtab       " tabs are spaces, mainly because of python
+set shiftwidth=4
+set smartindent
 
 " UI Config
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -50,6 +52,7 @@ set noerrorbells visualbell t_vb=    "Disable annoying error noises
 set splitbelow          " Open new vertical split bottom
 set splitright          " Open new horizontal splits right
 set shortmess+=I        " Disable the default Vim startupt message
+set noswapfile
 
 " Buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

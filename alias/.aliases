@@ -6,10 +6,13 @@ function alias_if_exists() {
 }
 
 ## Git
+alias gal='git add --all'
 alias ga='git add'
 alias gs='git status'
+alias gc='git commit -mv'
 alias gu='git pull'
 alias gg='git graph'
+alias gb='git branch'
 unalias gd
 alias gd='git diff'
 alias gD='git ls-files'
