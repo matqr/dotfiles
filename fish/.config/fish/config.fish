@@ -10,7 +10,7 @@ set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
 alias gal='git add --all'
 alias ga='git add'
 alias gs='git status'
-alias gc='git commit -mv'
+alias gc='git commit -m'
 alias gu='git pull'
 alias gg='git graph'
 alias gb='git branch'
