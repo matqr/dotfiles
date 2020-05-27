@@ -13,7 +13,7 @@ alias gc='git commit -m'
 alias gu='git pull'
 alias gg='git graph'
 alias gb='git branch'
-unalias gd
+#unalias gd
 alias gd='git diff'
 alias gD='git ls-files'
   # Note that gs is also ghostscript
@@ -24,6 +24,7 @@ alias jc="jupyter console"
 alias jl="jupyter lab"
 alias jco="jupyter nbconvert"
 alias jn="jupyter notebook"
+alias jl-b="jupyter lab --no-browser"
 alias jn-b="jupyter notebook --no-browser"
 
 # Detect which `ls` flavor is in use
