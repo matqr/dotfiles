@@ -26,6 +26,8 @@ backup_if_exists ~/.bashrc
 backup_if_exists ~/.config/fish/config.fish
 backup_if_exists ~/.vimrc
 backup_if_exists ~/.ssh
+backup_if_exists ~/.alias
+
 
 for program in ${PROGRAMS[@]}; do
   stow -v $program

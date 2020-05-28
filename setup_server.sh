@@ -7,7 +7,7 @@
 # Dont link DS_Store files
 find . -name ".DS_Store" -exec rm {} \;
 
-PROGRAMS=(alias git stow vim)
+PROGRAMS=(alias keybinding git stow vim)
 
 function backup_if_exists() {
     if [ -f $1 ];
@@ -22,6 +22,7 @@ function backup_if_exists() {
 
 # Clean common conflicts
 backup_if_exists ~/.vimrc
+backup_if_exists ~/.aliases
 
 for program in ${PROGRAMS[@]}; do
   stow -v $program
@@ -29,3 +30,8 @@ for program in ${PROGRAMS[@]}; do
 done
 
 echo "Done!"
+
+echo "Launching aliases"
+if [ -f ~/.aliases ]; then
+  source ~/.aliases
+fi
