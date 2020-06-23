@@ -13,8 +13,8 @@ alias gc='git commit -m'
 alias gu='git pull'
 alias gg='git graph'
 alias gb='git branch'
-unalias gd
-alias gd='git diff'
+#unalias gd
+#alias gd='git diff'
 alias gD='git ls-files'
 # Note that gs is also ghostscript
 alias ghostscript="/usr/local/bin/gs"

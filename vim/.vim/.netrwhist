@@ -1,0 +1,5 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =3
+let g:netrw_dirhist_1='/home/matias/.dotfiles/alias'
+let g:netrw_dirhist_2='/home/matias/.dotfiles'
+let g:netrw_dirhist_3='/home/matias/.dotfiles/alias'
