@@ -15,6 +15,7 @@ alias gc='git commit -m'
 alias gu='git pull'
 alias gg='git graph'
 alias gb='git branch'
+alias gp='git push'
 #unalias gd
 alias gd='git diff'
 alias gD='git ls-files'
