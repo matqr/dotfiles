@@ -1,5 +1,5 @@
 # more of the actual colors and stuff are set in other dotfiles
-background_opacity: 0.75
+background_opacity: 0.8
 
 window:
   decorations: "none"
