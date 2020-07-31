@@ -7,7 +7,7 @@
 # Dont link DS_Store files
 find . -name ".DS_Store" -exec rm {} \;
 
-PROGRAMS=(alias bash git stow vim ssh fish)
+PROGRAMS=(alias bash git stow vim ssh fish alacritty)
 
 function backup_if_exists() {
     if [ -f $1 ];
@@ -27,7 +27,7 @@ backup_if_exists ~/.config/fish/config.fish
 backup_if_exists ~/.vimrc
 backup_if_exists ~/.ssh
 backup_if_exists ~/.alias
-
+backup_if_exists ~/.config/alacritty/alacritty.yml
 
 for program in ${PROGRAMS[@]}; do
   stow -v $program
