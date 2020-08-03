@@ -2,7 +2,6 @@
 source ~/.profile;clear;
 set -xU LSCOLORS gxdxcxdxbxegedabaggxgx
 LS >/dev/null
-set fish_greeting # remove greeting
 
 ## Paths
 set PATH /Users/matias/miniconda3/bin $PATH
@@ -20,7 +19,7 @@ alias gu='git pull'
 alias gg='git graph'
 alias gb='git branch'
 alias gp='git push'
-#unalias gd
+# unalias gd
 alias gd='git diff'
 alias gD='git ls-files'
   # Note that gs is also ghostscript
@@ -33,3 +32,6 @@ alias jco="jupyter nbconvert"
 alias jn="jupyter notebook"
 alias jn-b="jupyter notebook --no-browser"
 
+# No greeting when starting an interactive shell.
+function fish_greeting
+end

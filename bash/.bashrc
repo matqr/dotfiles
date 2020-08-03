@@ -1,4 +1,5 @@
 # Environment setup
+set fish_greeting # no start up message
 
 # ALIASES
 if [ -f ~/.aliases ]; then
