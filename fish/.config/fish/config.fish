@@ -1,13 +1,17 @@
+## Display
 source ~/.profile;clear;
 set -xU LSCOLORS gxdxcxdxbxegedabaggxgx
 LS >/dev/null
+set fish_greeting # remove greeting
+
+## Paths
 set PATH /Users/matias/miniconda3/bin $PATH
 source "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
 status --is-interactive; and source (rbenv init -|psub)
 set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
 
-# alias
-## Git
+## Alias
+# Git
 alias gal='git add --all'
 alias ga='git add'
 alias gs='git status'
@@ -22,7 +26,7 @@ alias gD='git ls-files'
   # Note that gs is also ghostscript
 alias ghostscript="/usr/local/bin/gs"
 
-## Jupyter
+# Jupyter
 alias jc="jupyter console"
 alias jl="jupyter lab"
 alias jco="jupyter nbconvert"
