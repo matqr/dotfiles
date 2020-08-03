@@ -7,7 +7,7 @@
 # Dont link DS_Store files
 find . -name ".DS_Store" -exec rm {} \;
 
-PROGRAMS=(alias bash git stow vim ssh fish alacritty)
+PROGRAMS=(alias bash git stow vim ssh fish alacritty tmux)
 
 function backup_if_exists() {
     if [ -f $1 ];
