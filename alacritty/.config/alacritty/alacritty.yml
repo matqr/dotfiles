@@ -61,7 +61,7 @@ key_bindings:
   - { key: D,        mods: Command,       chars: "\x02\x22" } # vertical pane 
   - { key: D,        mods: Command|Shift, chars: "\x02\x25" } # horizontal pane
   - { key: W,        mods: Command,       chars: "\x02\x78" } # close pane
-  ## The binding of h,j,k,l for tmux itself is dont on the tmux.conf
+  ## The binding of h,j,k,l for tmux itself is done on the tmux.conf
   # https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/
   - { key: H,        mods: Command,       chars: "\x02\x68" } # move to left pane  
   - { key: J,        mods: Command,       chars: "\x02\x6a" } # move to down pane
@@ -69,7 +69,8 @@ key_bindings:
   - { key: L,        mods: Command,       chars: "\x02\x6c" } # move to right pane
   - { key: T,        mods: Command,       chars: "\x02\x63" } # new window with shell
   - { key: R,        mods: Command,       chars: "\x02\x2c" } # rename window 
-  - { key: Key1,     mods: Command,       chars: "\x02\x31" } # switch to sessions 0..9
+  - { key: Key0,     mods: Command,       chars: "\x02\x30" } # switch to sessions 0..9
+  - { key: Key1,     mods: Command,       chars: "\x02\x31" } 
   - { key: Key2,     mods: Command,       chars: "\x02\x32" }
   - { key: Key3,     mods: Command,       chars: "\x02\x33" }
   - { key: Key4,     mods: Command,       chars: "\x02\x34" }
@@ -82,4 +83,3 @@ key_bindings:
   - { key: Down,     mods: Command,       chars: "\x02\x4a" }
   - { key: Up,       mods: Command,       chars: "\x02\x4b" }
   - { key: Right,    mods: Command,       chars: "\x02\x4c" }
-  ## Other keybindings for like moving between panes and changing their size is done in tmux.conf
