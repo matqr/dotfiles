@@ -47,14 +47,12 @@ selection:
 live_config_reload: true
 
 key_bindings:
-  - { key: V,        mods: Control|Shift, action: Paste }
-  - { key: C,        mods: Control|Shift, action: Copy }
-  - { key: Key0,     mods: Control,       action: ResetFontSize }
-  - { key: Equals,   mods: Control,       action: IncreaseFontSize }
-  - { key: Add,      mods: Control,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Control,       action: DecreaseFontSize }
-  - { key: Minus,    mods: Control,       action: DecreaseFontSize }
-  - { key: N,        mods: Control,       action: SpawnNewInstance }
+  - { key: Key0,     mods: Command,       action: ResetFontSize }
+  - { key: Equals,   mods: Command,       action: IncreaseFontSize }
+  - { key: Add,      mods: Command,       action: IncreaseFontSize }
+  - { key: Subtract, mods: Command,       action: DecreaseFontSize }
+  - { key: Minus,    mods: Command,       action: DecreaseFontSize }
+  - { key: N,        mods: Command,       action: SpawnNewInstance }
   ## iterm2 keybindings, to make the most of the command key
   # hexcode guide: https://www.csee.umbc.edu/portal/help/theory/ascii.txt
   # template: https://arslan.io/2018/02/05/gpu-accelerated-terminal-alacritty/#make-alacritty-feel-like-iterm2
