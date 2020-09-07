@@ -23,8 +23,6 @@ function backup_if_exists() {
 # Clean common conflicts
 backup_if_exists ~/.vimrc
 backup_if_exists ~/.aliases
-backup_if_exists ~/.bashrc
-backup_if_exists ~/.bash_profile
 backup_if_exists ~/.inputrc
 backup_if_exists ~/.gitignore_global
 
@@ -35,7 +33,7 @@ done
 
 echo "Done!"
 
-echo "Launching aliases"
 if [ -f ~/.aliases ]; then
+  echo "Launching aliases"
   source ~/.aliases
 fi
