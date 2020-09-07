@@ -60,6 +60,7 @@ key_bindings:
   - { key: D,        mods: Command|Shift, chars: "\x02\x25" } # horizontal pane
   - { key: W,        mods: Command,       chars: "\x02\x78" } # close pane
   ## The binding of h,j,k,l for tmux itself is done on the tmux.conf
+  # Here command is being pressed but the HEX code sent to the terminal is 0x02 (control)
   # https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/
   - { key: H,        mods: Command,       chars: "\x02\x68" } # move to left pane  
   - { key: J,        mods: Command,       chars: "\x02\x6a" } # move to down pane
