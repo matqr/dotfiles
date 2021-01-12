@@ -53,6 +53,7 @@ set splitbelow          " Open new vertical split bottom
 set splitright          " Open new horizontal splits right
 set shortmess+=I        " Disable the default Vim startupt message
 set noswapfile
+set scrolloff=8
 
 " Buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
