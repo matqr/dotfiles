@@ -10,6 +10,9 @@ status --is-interactive; and source (rbenv init -|psub)
 set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
 
 ## Alias
+## Commands
+alias jl-gtx1080='ssh -L 8890:localhost:8888 budslab-gtx1080'
+
 # Git
 alias gal='git add --all'
 alias ga='git add'

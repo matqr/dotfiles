@@ -5,9 +5,6 @@ function alias_if_exists() {
     fi
 }
 
-## Server connections
-alias jl-gtx1080="ssh -L 8889:localhost:8888 budslab-gtx1080"
-
 ## Git
 alias gal='git add --all'
 alias ga='git add'
