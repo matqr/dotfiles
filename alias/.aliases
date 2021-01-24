@@ -5,6 +5,9 @@ function alias_if_exists() {
     fi
 }
 
+## Server connections
+alias jl-gtx1080="ssh -L 8889:localhost:8888 budslab-gtx1080"
+
 ## Git
 alias gal='git add --all'
 alias ga='git add'
@@ -37,7 +40,7 @@ else # macOS `ls`
     set colorflag "-G"
 	#colorflag="-G"
 	export LSCOLORS='BxBxhxDxfxhxhxhxhxcxcx'
-fi
+fi 
 
 # Always use color output for `ls`
 alias ls="command ls ${colorflag}"

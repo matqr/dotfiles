@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =3
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/Users/matias/Documents/macOS-setup/software'
+let g:netrw_dirhist_5='/Users/matias/Documents/macOS-setup'
+let g:netrw_dirhist_4='/Users/matias/Documents'
 let g:netrw_dirhist_3='/Users/matias/Documents/aws-keys'
 let g:netrw_dirhist_2='/Users/matias'
 let g:netrw_dirhist_1='/Users/matias/Documents/website/_news'
