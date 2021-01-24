@@ -39,6 +39,7 @@ set number              " show line numbers
 " This is useful because you can tell, at a glance, what count is needed to
 " jump up or down to a particular line, by {count}k to go up or {count}j to go
 " down.
+set exrc                " in case each projects has its own vimrc
 set relativenumber      
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
@@ -53,7 +54,9 @@ set splitbelow          " Open new vertical split bottom
 set splitright          " Open new horizontal splits right
 set shortmess+=I        " Disable the default Vim startupt message
 set noswapfile
+set nobackup
 set scrolloff=8
+set colorcolumn=80
 
 " Buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
