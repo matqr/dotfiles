@@ -10,8 +10,9 @@ status --is-interactive; and source (rbenv init -|psub)
 set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
 
 ## Alias
-## Commands
-alias jl-gtx1080='ssh -L 8890:localhost:8888 budslab-gtx1080'
+# VIM
+alias vim="nvim"
+alias oldvim="vim" 
 
 # Git
 alias gal='git add --all'
@@ -25,7 +26,7 @@ alias gp='git push'
 # unalias gd
 alias gd='git diff'
 alias gD='git ls-files'
-  # Note that gs is also ghostscript
+ # Note that gs is also ghostscript
 alias ghostscript="/usr/local/bin/gs"
 
 # Jupyter
@@ -38,3 +39,4 @@ alias jn-b="jupyter notebook --no-browser"
 # No greeting when starting an interactive shell.
 function fish_greeting
 end
+set -g fish_user_paths "/usr/local/opt/tcl-tk/bin" $fish_user_paths

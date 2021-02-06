@@ -5,6 +5,10 @@ function alias_if_exists() {
     fi
 }
 
+## VIM
+alias vim="nvim"
+alias oldvim="\vim"
+
 ## Git
 alias gal='git add --all'
 alias ga='git add'

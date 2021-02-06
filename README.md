@@ -3,7 +3,7 @@ Custom configuration files for
 - alias
 - bash
 - fish
-- vim
+- vim/nvim (neovim 5.0 is needed)
 - git
 - stow
 - ssh

@@ -18,8 +18,10 @@ syntax on
 
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:molokai_original = 1
-colorscheme molokai " Monokai-like colorscheme
+"let g:molokai_original = 1
+"colorscheme molokai " Monokai-like colorscheme
+let g:vim_molokai_tasty_italic=1
+colorscheme vim-monokai-tasty
 syntax enable "enable syntax processing
 
 " Spaces & Tabs

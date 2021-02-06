@@ -1,5 +1,8 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =9
+let g:netrw_dirhist_9='/Users/matias/Documents/buddy-backend/sensors/awair'
+let g:netrw_dirhist_8='/Users/matias/.config'
+let g:netrw_dirhist_7='/Users/matias/Documents/buddy-backend/sensors/awair'
 let g:netrw_dirhist_6='/Users/matias/Documents/macOS-setup/software'
 let g:netrw_dirhist_5='/Users/matias/Documents/macOS-setup'
 let g:netrw_dirhist_4='/Users/matias/Documents'
