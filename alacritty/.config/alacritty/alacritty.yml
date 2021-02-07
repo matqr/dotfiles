@@ -47,7 +47,8 @@ selection:
 live_config_reload: true
 
 key_bindings:
-  - { key: Key0,     mods: Command,       action: ResetFontSize }
+  ## fonts
+  - { key: Key0,     mods: Command,       action: ResetFontSize    }
   - { key: Equals,   mods: Command,       action: IncreaseFontSize }
   - { key: Add,      mods: Command,       action: IncreaseFontSize }
   - { key: Subtract, mods: Command,       action: DecreaseFontSize }
