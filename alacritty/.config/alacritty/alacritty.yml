@@ -68,8 +68,7 @@ key_bindings:
   - { key: L,        mods: Command,       chars: "\x02\x6c" } # move to right pane
   - { key: T,        mods: Command,       chars: "\x02\x63" } # new window with shell
   - { key: R,        mods: Command,       chars: "\x02\x2c" } # rename window 
-  - { key: Key0,     mods: Command,       chars: "\x02\x30" } # switch to sessions 0..9
-  - { key: Key1,     mods: Command,       chars: "\x02\x31" } 
+  - { key: Key1,     mods: Command,       chars: "\x02\x31" } # switch to sessions 0..9
   - { key: Key2,     mods: Command,       chars: "\x02\x32" }
   - { key: Key3,     mods: Command,       chars: "\x02\x33" }
   - { key: Key4,     mods: Command,       chars: "\x02\x34" }
@@ -82,4 +81,3 @@ key_bindings:
   - { key: Down,     mods: Command,       chars: "\x02\x4a" }
   - { key: Up,       mods: Command,       chars: "\x02\x4b" }
   - { key: Right,    mods: Command,       chars: "\x02\x4c" }
-
