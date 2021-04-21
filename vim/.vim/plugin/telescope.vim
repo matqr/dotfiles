@@ -6,6 +6,10 @@ require('telescope').setup {
     prompt_prefix = ' >',
     color_devicons = true,
 
+    file_previewer = require('telescope.previewers').vim_bufer_cat.new,
+    grep_previewer = require('telescope.previewers').vim_buffer_vimgrep.new,
+    qflist_previewer = require('telescope.previewers').vim_buffer_qflist.new,
+
     mappings = {
       i = {
         ["<C-x>"] = false,
@@ -13,9 +17,17 @@ require('telescope').setup {
         ["<C-q>"] = actions.send_to_qflist,
       },
     }
+  },
+  extensions = {
+    fzy_native = {
+        override_generic_sorter = false,
+        override_file_sorter = true
+    }
   }
 }
 EOF
+
+require('telescope').load_extension('fzy_native')
 
 nnoremap <leader>ps :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
