@@ -12,9 +12,21 @@
 " loaded some other way (e.g. saved as `foo`, and then Vim started with
 " `vim -u foo`).
 set nocompatible
+set signcolumn=yes
 
 " Turn on syntax highlighting.
 syntax on
+
+" git
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:signify_sign_add               = '+'
+let g:signify_sign_delete            = '_'
+let g:signify_sign_delete_first_line = '‾'
+let g:signify_sign_change            = '~'
+
+let g:signify_sign_show_count = 0
+let g:signify_sign_show_text = 1
+let g:gitgutter_set_sign_backgrounds = 1
 
 " Colors
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
