@@ -17,6 +17,14 @@ set signcolumn=yes
 " Turn on syntax highlighting.
 syntax on
 
+" lint
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:ale_fixers = ['prettier', 'pylint']
+let g:ale_python_pylint_options = '--rcfile ~/.vim/plugin/pylint.rc'
+let g:ale_exclude_highlights = ['line too long', 'lazy % formatting', 'string statement']
+let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace', 'black']}
+let g:ale_completion_enabled = 1
+
 " git
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:signify_sign_add               = '+'
@@ -97,7 +105,7 @@ nmap Q <Nop>
 " being searched are lowercase. However, the search becomes case-sensitive if
 " it contains any capital letters. This makes searching more convenient.
 set ignorecase
-set smartcase " But make it case sensitive if an uppercase is enteredj
+set smartcase " But make it case sensitive if an uppercase is entered
 " Enable searching as you type, rather than waiting till you press enter.
 set incsearch
 set hlsearch            " highlight matches

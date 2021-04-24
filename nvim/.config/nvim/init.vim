@@ -47,6 +47,10 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native/.nvim'
 
+" ling
+" https://github.com/dense-analysis/ale
+Plug 'dense-analysis/ale'
+
 call plug#end()
 
 source ~/.vimrc
