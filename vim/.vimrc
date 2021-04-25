@@ -19,10 +19,18 @@ syntax on
 
 " lint
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:ale_fixers = ['prettier', 'pylint']
+highlight clear ALEErrorSign
+highlight clear ALEWarningSign
+" better looking signs
+let g:ale_sign_error = '●'
+let g:ale_sign_warning = '.'
+let g:ale_fix_on_save = 1 " only perform fixes after saving
+let g:ale_fixers = {
+    \    '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \    'python': ['black']
+    \}
 let g:ale_python_pylint_options = '--rcfile ~/.vim/plugin/pylint.rc'
-let g:ale_exclude_highlights = ['line too long', 'lazy % formatting', 'string statement']
-let g:ale_fixers = {'*': ['remove_trailing_lines', 'trim_whitespace', 'black']}
+let g:ale_exclude_highlights = ['line too long', 'lazy % formatting', 'string statement', 'method docstring', 'snake_case', 'outer scope']
 let g:ale_completion_enabled = 1
 
 " git
@@ -62,7 +70,7 @@ set number              " show line numbers
 " jump up or down to a particular line, by {count}k to go up or {count}j to go
 " down.
 set exrc                " in case each projects has its own vimrc
-set relativenumber      
+set relativenumber
 set showcmd             " show command in bottom bar
 set cursorline          " highlight current line
 filetype indent on      " load filetype-specific indent files
@@ -89,15 +97,15 @@ set colorcolumn=80
 " for more information on this.
 set hidden
 
-" Sensible stuff 
+" Sensible stuff
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The backspace key has slightly unintuitive behavior by default. For example,
 " by default, you can't backspace before the insertion point set with 'i'.
 " This configuration makes backspace behave more reasonably, in that you can
 " backspace over anything.
-set backspace=indent,eol,start     
+set backspace=indent,eol,start
 " 'Q' in normal mode enters Ex mode. You almost never want this.
-nmap Q <Nop> 
+nmap Q <Nop>
 
 "Searching
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -126,3 +134,5 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
+" remapping keys
+nmap <silent> <C-e> <Plug>(ale_next_wrap)
