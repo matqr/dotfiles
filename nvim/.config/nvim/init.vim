@@ -38,6 +38,7 @@ Plug 'plasticboy/vim-markdown'
 " git
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
+Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 

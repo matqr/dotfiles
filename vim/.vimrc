@@ -30,7 +30,7 @@ let g:ale_fixers = {
     \    'python': ['black']
     \}
 let g:ale_python_pylint_options = '--rcfile ~/.vim/plugin/pylint.rc'
-let g:ale_exclude_highlights = ['line too long', 'lazy % formatting', 'string statement', 'method docstring', 'snake_case', 'outer scope']
+let g:ale_exclude_highlights = ['line too long', 'lazy % formatting', 'string statement', 'method docstring', 'snake_case', 'outer scope', 'trailing whitespace', 'constant name']
 let g:ale_completion_enabled = 1
 
 " git
@@ -70,9 +70,17 @@ set number              " show line numbers
 " jump up or down to a particular line, by {count}k to go up or {count}j to go
 " down.
 set exrc                " in case each projects has its own vimrc
+set guicursor=
 set relativenumber
 set showcmd             " show command in bottom bar
+" Give more space for displaying messages
+set cmdheight=2
 set cursorline          " highlight current line
+" Having longer updatetime (default is 4000 ms = 4 s) leads to noticeable
+" delays and poor user experience
+set updatetime=50
+" Don't pass messages to |ins-completion-menu|
+set shortmess+=c
 filetype indent on      " load filetype-specific indent files
 filetype plugin on      " load filetype specific plugin files
 set wildmenu            " visual autocomplete for command menu
@@ -85,6 +93,8 @@ set splitright          " Open new horizontal splits right
 set shortmess+=I        " Disable the default Vim startupt message
 set noswapfile
 set nobackup
+set undodir=~/.vim/undodir
+set undofile
 set scrolloff=8
 set colorcolumn=80
 
@@ -114,9 +124,9 @@ nmap Q <Nop>
 " it contains any capital letters. This makes searching more convenient.
 set ignorecase
 set smartcase " But make it case sensitive if an uppercase is entered
+"set hlsearch  " highlight matches
 " Enable searching as you type, rather than waiting till you press enter.
 set incsearch
-set hlsearch            " highlight matches
 
 " Try to prevent bad habits like using the arrow keys for movement. This is
 " not the only possible bad habit. For example, holding down the h/j/k/l keys
@@ -134,5 +144,8 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
-" remapping keys
+" Remapping keys
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
+"This unsets the "last search pattern" register by hitting return
+nnoremap <CR> :noh<CR><CR>
