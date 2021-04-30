@@ -146,6 +146,13 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " Remapping keys
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" remaps works as follows: mode lhs rhs
+" mode will be a letter that indicates the mode from which the
+" action will take place
+" lhs: the thing you need to execute to execute the remap
+" rhs: the thing that will be executed with the remap
+" nore: no recursive execution
+let mapleader = " "
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
