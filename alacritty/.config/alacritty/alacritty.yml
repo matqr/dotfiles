@@ -1,5 +1,5 @@
 # more of the actual colors and stuff are set in other dotfiles
-background_opacity: 0.8
+background_opacity: 0.9
 
 window:
   decorations: "none"
@@ -28,6 +28,9 @@ font:
     x: 0
     y: 0
 
+  # OS X only: use thin stroke font rendering. Thin strokes are suitable
+  # for retina displays, but for non-retina you probably want this set to
+  # false.
   use_thin_strokes: false
 
 scrolling:
@@ -52,25 +55,23 @@ key_bindings:
   ## fonts
   - { key: Key0,     mods: Command,       action: ResetFontSize    }
   - { key: Equals,   mods: Command,       action: IncreaseFontSize }
-  - { key: Add,      mods: Command,       action: IncreaseFontSize }
-  - { key: Subtract, mods: Command,       action: DecreaseFontSize }
   - { key: Minus,    mods: Command,       action: DecreaseFontSize }
   - { key: N,        mods: Command,       action: SpawnNewInstance }
   ## iterm2 keybindings, to make the most of the command key
   # hexcode guide: https://www.csee.umbc.edu/portal/help/theory/ascii.txt
   # template: https://arslan.io/2018/02/05/gpu-accelerated-terminal-alacritty/#make-alacritty-feel-like-iterm2
-  - { key: D,        mods: Command,       chars: "\x02\x22" } # vertical pane 
+  - { key: D,        mods: Command,       chars: "\x02\x22" } # vertical pane
   - { key: D,        mods: Command|Shift, chars: "\x02\x25" } # horizontal pane
   - { key: W,        mods: Command,       chars: "\x02\x78" } # close pane
   ## The binding of h,j,k,l for tmux itself is done on the tmux.conf
   # Here command is being pressed but the HEX code sent to the terminal is 0x02 (control)
   # https://www.hamvocke.com/blog/a-guide-to-customizing-your-tmux-conf/
-  - { key: H,        mods: Command,       chars: "\x02\x68" } # move to left pane  
+  - { key: H,        mods: Command,       chars: "\x02\x68" } # move to left pane
   - { key: J,        mods: Command,       chars: "\x02\x6a" } # move to down pane
   - { key: K,        mods: Command,       chars: "\x02\x6b" } # move to up pane
   - { key: L,        mods: Command,       chars: "\x02\x6c" } # move to right pane
   - { key: T,        mods: Command,       chars: "\x02\x63" } # new window with shell
-  - { key: R,        mods: Command,       chars: "\x02\x2c" } # rename window 
+  - { key: R,        mods: Command,       chars: "\x02\x2c" } # rename window
   - { key: Key1,     mods: Command,       chars: "\x02\x31" } # switch to sessions 0..9
   - { key: Key2,     mods: Command,       chars: "\x02\x32" }
   - { key: Key3,     mods: Command,       chars: "\x02\x33" }

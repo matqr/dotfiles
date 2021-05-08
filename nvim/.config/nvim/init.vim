@@ -1,6 +1,4 @@
-"set runtimepath^=~/.vim runtimepath+=~/.vim/after
-"let &packpath=&runtimepath
-
+" Plugin setup
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
          https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
@@ -8,13 +6,16 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 call plug#begin('~/.vim/plugged')
+
 " Colors
 Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'norcalli/nvim-colorizer.lua' # colorize hex-based numbers in vim
 
 " VIM enhancements
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'justinmk/vim-sneak'
+"Plug 'justinmk/vim-sneak' # overwrites 's'
+Plug 'liuchengxu/vim-which-key'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -26,7 +27,6 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
 " Syntactic language support
-Plug 'cespare/vim-toml'
 Plug 'stephpy/vim-yaml'
 Plug 'rust-lang/rust.vim'
 Plug 'rhysd/vim-clang-format'
@@ -38,7 +38,7 @@ Plug 'plasticboy/vim-markdown'
 " git
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-Plug 'vim-airline/vim-airline'
+"Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
@@ -48,10 +48,11 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native/.nvim'
 
-" ling
+" lint
 " https://github.com/dense-analysis/ale
 Plug 'dense-analysis/ale'
 
 call plug#end()
 
+" Source main vimrc
 source ~/.vimrc

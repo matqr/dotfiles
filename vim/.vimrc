@@ -1,4 +1,4 @@
-" https://dougblack.io/words/a-good-vimrc.html
+" htps://dougblack.io/words/a-good-vimrc.html
 
 " Comments in Vimscript start with a `"`.
 
@@ -11,11 +11,15 @@
 " is present. But we're including it here just in case this config file is
 " loaded some other way (e.g. saved as `foo`, and then Vim started with
 " `vim -u foo`).
+
 set nocompatible
 set signcolumn=yes
 
 " Turn on syntax highlighting.
 syntax on
+
+" The mapleader has to be set before pluggins
+let mapleader = "\<Space>"
 
 " lint
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -93,7 +97,7 @@ set splitright          " Open new horizontal splits right
 set shortmess+=I        " Disable the default Vim startupt message
 set noswapfile
 set nobackup
-set undodir=~/.vim/undodir
+set undodir=~/.vim/undodirl
 set undofile
 set scrolloff=8
 set colorcolumn=80
@@ -152,7 +156,6 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " lhs: the thing you need to execute to execute the remap
 " rhs: the thing that will be executed with the remap
 " nore: no recursive execution
-let mapleader = " "
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
