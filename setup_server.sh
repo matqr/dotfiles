@@ -7,7 +7,7 @@
 # Dont link DS_Store files
 find . -name ".DS_Store" -exec rm {} \;
 
-PROGRAMS=(alias keybinding git stow vim nvim)
+PROGRAMS=(alias keybinding git stow nvim)
 
 function backup_if_exists() {
     if [ -f $1 ];
@@ -21,15 +21,14 @@ function backup_if_exists() {
 }
 
 # Install some basic programs
-add-apt-repository ppa:neovim-ppa/stable
+add-apt-repository ppa:neovim-ppa/unstable
 apt-get update
-apt-get install neovim
 apt-get install vim
+apt-get install neovim
 apt-get install neofetch
 apt-get install ncdu
 
 # Clean common conflicts
-backup_if_exists ~/.vimrc
 backup_if_exists ~/.aliases
 backup_if_exists ~/.inputrc
 backup_if_exists ~/.gitignore_global

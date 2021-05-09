@@ -14,7 +14,7 @@
 
 set nocompatible
 set signcolumn=yes
-
+let mapleader="<\Space>"
 " Turn on syntax highlighting.
 syntax on
 
