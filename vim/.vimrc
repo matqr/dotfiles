@@ -18,10 +18,8 @@ set signcolumn=yes
 " Turn on syntax highlighting.
 syntax on
 
-" The mapleader has to be set before pluggins
-let mapleader = "\<Space>"
 
-" lint
+" Ale (lint)
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
@@ -37,7 +35,7 @@ let g:ale_python_pylint_options = '--rcfile ~/.vim/plugin/pylint.rc'
 let g:ale_exclude_highlights = ['line too long', 'lazy % formatting', 'string statement', 'method docstring', 'snake_case', 'outer scope', 'trailing whitespace', 'constant name']
 let g:ale_completion_enabled = 1
 
-" git
+" Git
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:signify_sign_add               = '+'
 let g:signify_sign_delete            = '_'
@@ -102,6 +100,12 @@ set undofile
 set scrolloff=8
 set colorcolumn=80
 
+" WhichKey
+" Define a separator
+let g:which_key_sep = '→'
+" Not a fan of floating windows for this
+let g:which_key_use_floating_win = 0
+
 " Buffers
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " By default, Vim doesn't let you hide a buffer (i.e. have a buffer that isn't
@@ -159,3 +163,7 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
+
+" WhichKey
+"nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
+"vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>

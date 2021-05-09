@@ -1,3 +1,7 @@
+" Fish doesn't play all that well with others
+set shell=/bin/bash
+let mapleader = "\<Space>"
+
 " Plugin setup
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
@@ -5,11 +9,17 @@ if empty(glob('~/.vim/autoload/plug.vim'))
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
-call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.vim/plugged')
+call plug#begin()
+
+" Search
+Plug 'romainl/vim-cool'               " Disables highlight when search is done
+Plug 'haya14busa/incsearch.vim'       " Better incremental search
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " FZF plugin, makes Ctrl-P unnecessary
+Plug 'junegunn/fzf.vim'
 
 " Colors
 Plug 'patstockwell/vim-monokai-tasty'
-"Plug 'norcalli/nvim-colorizer.lua' # colorize hex-based numbers in vim
 
 " VIM enhancements
 Plug 'ciaranm/securemodelines'
@@ -17,8 +27,22 @@ Plug 'editorconfig/editorconfig-vim'
 "Plug 'justinmk/vim-sneak' # overwrites 's'
 Plug 'liuchengxu/vim-which-key'
 
+" Text Manipulation
+Plug 'tpope/vim-sensible'             " Some better defaults
+Plug 'tpope/vim-unimpaired'           " Pairs of mappings
+Plug 'tpope/vim-surround'             " Surround with parentheses & co
+Plug 'joom/vim-commentary'            " To comment stuff out
+Plug 'terryma/vim-multiple-cursors'   " Multiple cursors like sublime
+Plug 'godlygeek/tabular'              " For alignment
+Plug 'junegunn/vim-easy-align'        " Easier alignment
+Plug 'foosoft/vim-argwrap'            " convert lists of arguments into blocks of arguments
+" Interacts with coc Plug 'tpope/vim-endwise'              " Ends control flow indentifiers
+Plug 'tpope/vim-repeat'               " Adds repeat thorugh . to other packages
+Plug 'tpope/vim-speeddating'          " Dates in vim
+
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
+Plug 'mhinz/vim-startify'             " Better start screen
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 
