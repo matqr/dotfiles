@@ -167,6 +167,7 @@ inoremap <Down>  <ESC>:echoe "Use j"<CR>
 " =============================================================================
 " Ale LSP, linting
 " =============================================================================
+let g:ale_completion_enabled = 1 " autocompletion
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
 " better looking signs
@@ -178,11 +179,12 @@ let g:ale_fixers = {
     \    'python': ['black']
     \}
 let g:ale_python_pylint_options = '--rcfile ~/.vim/plugin/pylint.rc'
-let g:ale_exclude_highlights = ['line too long', 'lazy % formatting', 'string statement', 'method docstring', 'snake_case', 'outer scope', 'trailing whitespace', 'constant name']
+let g:ale_exclude_highlights = ['line too long', 'too many arguments', 'too many locals', 'lazy % formatting', 'string statement', 'method docstring', 'snake_case', 'outer scope', 'trailing whitespace', 'constant name']
 let g:ale_completion_enabled = 1
 " jump through linting errors/warnings
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
-
+" go to the definition of the word under the cursor
+nmap <silent> <C-g> <Plug>(ale_go_to_definition_in_split)
 " =============================================================================
 " Git
 " =============================================================================
