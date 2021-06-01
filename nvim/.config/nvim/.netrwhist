@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =0
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/Users/matias/Documents/project-data/admin__website/_news'
 let g:netrw_dirhist_0='/Users/matias/.dotfiles/nvim/.config/nvim'
 let g:netrw_dirhist_9='/Users/matias/.dotfiles/nvim/.config'
 let g:netrw_dirhist_8='/Users/matias/.dotfiles/fish/.config/fish/conf.d'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_5='/Users/matias/.dotfiles/alias'
 let g:netrw_dirhist_4='/Users/matias/.dotfiles/nvim/.config/nvim'
 let g:netrw_dirhist_3='/Users/matias/.dotfiles/nvim/.config'
 let g:netrw_dirhist_2='/Users/matias/.dotfiles/fish/.config/fish/conf.d'
-let g:netrw_dirhist_1='/Users/matias/.dotfiles/fish/.config/fish'
