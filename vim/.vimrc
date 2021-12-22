@@ -164,6 +164,3 @@ nmap <silent> <C-e> <Plug>(ale_next_wrap)
 "This unsets the "last search pattern" register by hitting return
 nnoremap <CR> :noh<CR><CR>
 
-" WhichKey
-"nnoremap <silent> <leader> :silent WhichKey '<Space>'<CR>
-"vnoremap <silent> <leader> :silent <c-u> :silent WhichKeyVisual '<Space>'<CR>

@@ -20,10 +20,10 @@ set wildignore+=**/.git/*
 " PLUGINS
 " =============================================================================
 " Install setup
-"set MYVIMRC="$HOME/.config/nvim/init.vim"
-if empty(glob('~/.vim/autoload/plug.vim'))
-  silent !sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
-         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+let data_dir = has('nvim') ? stdpath('data') . '/site' : '~/.vim'
+if empty(glob(data_dir . '/autoload/plug.vim'))
+  silent execute '!curl -fLo '.data_dir.'/autoload/plug.vim --create-dirs  https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
 
@@ -41,7 +41,6 @@ Plug 'patstockwell/vim-monokai-tasty'
 " VIM enhancements
 Plug 'ciaranm/securemodelines'
 Plug 'editorconfig/editorconfig-vim'
-"Plug 'justinmk/vim-sneak' " This overrides using 's'
 Plug 'liuchengxu/vim-which-key'
 
 " Text Manipulation
@@ -53,7 +52,6 @@ Plug 'terryma/vim-multiple-cursors'   " Multiple cursors like sublime
 Plug 'godlygeek/tabular'              " For alignment
 Plug 'junegunn/vim-easy-align'        " Easier alignment
 Plug 'foosoft/vim-argwrap'            " convert lists of arguments into blocks of arguments
-" Interacts with coc Plug 'tpope/vim-endwise'              " Ends control flow indentifiers
 Plug 'tpope/vim-repeat'               " Adds repeat thorugh . to other packages
 Plug 'tpope/vim-speeddating'          " Dates in vim
 Plug 'dense-analysis/ale'             " https://github.com/dense-analysis/ale
@@ -80,7 +78,6 @@ Plug 'plasticboy/vim-markdown'
 " Git
 Plug 'mhinz/vim-signify'
 Plug 'tpope/vim-fugitive'
-"Plug 'vim-airline/vim-airline'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
@@ -113,7 +110,7 @@ set softtabstop=4                     " number of spaces in tab when editing
 set expandtab                         " tabs are spaces, mainly because of python
 set shiftwidth=4
 set smartindent
-"syntax on                             " Turn on syntax highlighting.
+
 let g:vim_molokai_tasty_italic=1
 colorscheme vim-monokai-tasty
 "syntax enable                         "enable syntax processing with color scheme
@@ -219,8 +216,3 @@ autocmd BufRead *.md set filetype=markdown
 autocmd BufRead *.lds set filetype=ld
 autocmd BufRead *.tex set filetype=tex
 autocmd BufRead *.trm set filetype=c
-
-"augroup highlight_yank
-"    autocmd!
-"    autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 40})
-"augroup END

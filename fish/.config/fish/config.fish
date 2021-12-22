@@ -4,8 +4,8 @@ set -xU LSCOLORS gxdxcxdxbxegedabaggxgx
 LS >/dev/null
 
 ## Paths
-set PATH /Users/matias/miniconda3/bin $PATH
-source "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
+set PATH /Users/maqr/miniconda3/bin $PATH
+#source "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
 status --is-interactive; and source (rbenv init -|psub)
 set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
 
@@ -40,3 +40,9 @@ alias jn-b="jupyter notebook --no-browser"
 function fish_greeting
 end
 set -g fish_user_paths "/usr/local/opt/tcl-tk/bin" $fish_user_paths
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# <<< conda initialize <<<
+
