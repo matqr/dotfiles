@@ -1,13 +1,14 @@
 Custom configuration files for
 - alias
-- bash
 - fish
-- nvim (neovim 5.0 is needed)
-- git
-- stow
 - ssh
-- alacritty
 - tmux
+- alacritty
+- bash
+- git
+- nvim
+- stow
+- vim
 
 Clone into `~/.dotfiles`
 
@@ -17,3 +18,16 @@ E.g. `config.fish` should be place in `~/.config/fish/`, thus this same folder s
 For aliases in fish, copy them into `config/fish`
 
 Lots of stuff copied over from [ThePrimeagen](https://github.com/awesome-streamers/awesome-streamerrc/tree/master/ThePrimeagen)
+
+# Tips
+
+Run `tmux` automatically when `fish` starts.
+Add the following file in `~/.config/fish/conf.d/tmux.fish
+
+```
+if not set -q TMUX
+    set -g TMUX tmux new-session -d -s base
+    eval $TMUX
+    tmux attach-session -d -t base
+end
+```
