@@ -1,6 +1,6 @@
 lua require("theprimeagen")
 
-" Updated by matqr
+" Leader is mapped in .vimrc
 nnoremap <leader>fs :lua require('telescope.builtin').grep_string({ search = vim.fn.input("Grep For > ")})<CR>
 nnoremap <C-p> :lua require('telescope.builtin').git_files()<CR>
 nnoremap <Leader>ff :lua require('telescope.builtin').find_files()<CR>
