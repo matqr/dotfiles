@@ -18,8 +18,7 @@ end
 -- Install fonts https://www.chrisatmachine.com/Linux/05-nerd-fonts/
 --   פּ ﯟ   some other good icons
 local kind_icons = {
-
-  Text = "",
+  Text = "",
   Method = "m",
   Function = "",
   Constructor = "",
