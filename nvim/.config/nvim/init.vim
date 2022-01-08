@@ -54,7 +54,28 @@ Plug 'junegunn/vim-easy-align'        " Easier alignment
 Plug 'foosoft/vim-argwrap'            " convert lists of arguments into blocks of arguments
 Plug 'tpope/vim-repeat'               " Adds repeat thorugh . to other packages
 Plug 'tpope/vim-speeddating'          " Dates in vim
+
+" LSP and linting
+" https://github.com/neovim/nvim-lspconfig
+" https://github.com/williamboman/nvim-lsp-installer
+" use LspInstallInfo to install needed language servers
+Plug 'neovim/nvim-lspconfig'
+Plug 'williamboman/nvim-lsp-installer'
 Plug 'dense-analysis/ale'             " https://github.com/dense-analysis/ale
+
+" Autocompletion
+Plug 'neovim/nvim-lspconfig'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-nvim-lua'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/cmp-path'
+Plug 'hrsh7th/cmp-cmdline'
+Plug 'hrsh7th/nvim-cmp'
+
+" Snippet engine
+Plug 'L3MON4D3/LuaSnip'
+Plug 'rafamadriz/friendly-snippets'
+Plug 'saadparwaiz1/cmp_luasnip'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -87,11 +108,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-" completion
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-" Use <Tab> and <S-Tab> to navigate the completion list:
-inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
-inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 call plug#end()
 
@@ -156,7 +172,25 @@ set colorcolumn=80
 set ignorecase
 set smartcase                         " but make it case sensitive if an uppercase is entered
 set incsearch                         " enable searching as you type
-" Prevet bad habits of using arrows
+
+" Better window management (neovim splits)
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" Move text up and down
+nnoremap <A-j> :m .+1<CR>==
+nnoremap <A-k> :m .-2<CR>==
+inoremap <A-j> <Esc>:m .+1<CR>==gi
+inoremap <A-k> <Esc>:m .-2<CR>==gi
+vnoremap <A-j> :m '>+1<CR>gv=gv
+vnoremap <A-k> :m '<-2<CR>gv=gv
+
+" Avoid keeping deleted stuff on clipboard
+"vnoremap <p> "_dP # TODO not working
+
+" Prevent bad habits of using arrows
 " Do this in normal mode...
 nnoremap <Left>  :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
@@ -169,11 +203,12 @@ inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
 " =============================================================================
-" Ale LSP, linting
+" ALE LSP, linting
 " =============================================================================
 let g:ale_completion_enabled = 1 " autocompletion
 highlight clear ALEErrorSign
 highlight clear ALEWarningSign
+let g:ale_linters = {'python': ['flake8', 'mypy', 'pylint', 'pyright'],}
 " better looking signs
 let g:ale_sign_error = '●'
 let g:ale_sign_warning = '.'
@@ -189,6 +224,7 @@ let g:ale_completion_enabled = 1
 nmap <silent> <C-e> <Plug>(ale_next_wrap)
 " go to the definition of the word under the cursor
 nmap <silent> <C-g> <Plug>(ale_go_to_definition_in_split)
+
 " =============================================================================
 " Git
 " =============================================================================

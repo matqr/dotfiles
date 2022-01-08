@@ -1,4 +1,6 @@
 require("theprimeagen.telescope")
+require("theprimeagen.cmp")
+require("theprimeagen.lsp")
 
 P = function(v)
   print(vim.inspect(v))
