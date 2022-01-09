@@ -1,6 +1,8 @@
 require("theprimeagen.telescope")
 require("theprimeagen.cmp")
 require("theprimeagen.lsp")
+require("theprimeagen.treesitter")
+require("theprimeagen.comment")
 
 P = function(v)
   print(vim.inspect(v))

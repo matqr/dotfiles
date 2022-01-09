@@ -82,10 +82,12 @@ Plug 'itchyny/lightline.vim'
 Plug 'mhinz/vim-startify'             " Better start screen
 Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
+Plug 'numtoStr/Comment.nvim'
 
-" Neovim Tree shitter
+" Treesitter
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
+Plug 'JoosepAlviste/nvim-ts-context-commentstring'
 
 " Syntactic language support
 Plug 'stephpy/vim-yaml'
@@ -179,7 +181,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Move text up and down
+" Move text up and down # TODO: not working with mac
 nnoremap <A-j> :m .+1<CR>==
 nnoremap <A-k> :m .-2<CR>==
 inoremap <A-j> <Esc>:m .+1<CR>==gi
