@@ -5,3 +5,4 @@ end
 
 require("theprimeagen.lsp.lsp-installer")
 require("theprimeagen.lsp.handlers").setup()
+require("theprimeagen.lsp.null-ls")

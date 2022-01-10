@@ -61,7 +61,7 @@ Plug 'tpope/vim-speeddating'          " Dates in vim
 " use LspInstallInfo to install needed language servers
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
-Plug 'dense-analysis/ale'             " https://github.com/dense-analysis/ale
+Plug 'jose-elias-alvarez/null-ls.nvim' " formatters and linters
 
 " Autocompletion
 Plug 'neovim/nvim-lspconfig'
@@ -175,6 +175,10 @@ set ignorecase
 set smartcase                         " but make it case sensitive if an uppercase is entered
 set incsearch                         " enable searching as you type
 
+
+" Formatting
+nnoremap <leader>f :Format<CR>
+
 " Better window management (neovim splits)
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
@@ -204,28 +208,6 @@ inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
 
-" =============================================================================
-" ALE LSP, linting
-" =============================================================================
-let g:ale_completion_enabled = 1 " autocompletion
-highlight clear ALEErrorSign
-highlight clear ALEWarningSign
-let g:ale_linters = {'python': ['flake8', 'mypy', 'pylint', 'pyright'],}
-" better looking signs
-let g:ale_sign_error = '●'
-let g:ale_sign_warning = '.'
-let g:ale_fix_on_save = 1 " only perform fixes after saving
-let g:ale_fixers = {
-    \    '*': ['remove_trailing_lines', 'trim_whitespace'],
-    \    'python': ['black']
-    \}
-let g:ale_python_pylint_options = '--rcfile ~/.vim/plugin/pylint.rc'
-let g:ale_exclude_highlights = ['line too long', 'too many arguments', 'too many locals', 'lazy % formatting', 'string statement', 'method docstring', 'snake_case', 'outer scope', 'trailing whitespace', 'constant name']
-let g:ale_completion_enabled = 1
-" jump through linting errors/warnings
-nmap <silent> <C-e> <Plug>(ale_next_wrap)
-" go to the definition of the word under the cursor
-nmap <silent> <C-g> <Plug>(ale_go_to_definition_in_split)
 
 " =============================================================================
 " Git
