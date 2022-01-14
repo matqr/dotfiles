@@ -191,7 +191,7 @@ set incsearch                         " enable searching as you type
 
 
 " Formatting
-nnoremap <leader>f
+nnoremap <leader>f :Format<CR>
 
 " Better window management (neovim splits)
 nnoremap <C-h> <C-w>h
