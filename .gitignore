@@ -1,4 +1,5 @@
 .DS_store
 ssh/.ssh/known_hosts
 ssh/.ssh/id*
+*/.netrwhist
 .netrwhist

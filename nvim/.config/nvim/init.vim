@@ -17,6 +17,17 @@ set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
 " =============================================================================
+" LSP, linting, fixer
+" =============================================================================
+" lsp and linting are done with the lua pluggins, ale is just used as a fixer
+" TODO: get this done with null-ls
+let g:ale_disable_lsp = 1
+let g:ale_fix_on_save = 1 " only perform fixes after saving
+let g:ale_fixers = {
+    \    '*': ['remove_trailing_lines', 'trim_whitespace'],
+    \}
+
+" =============================================================================
 " PLUGINS
 " =============================================================================
 " Install setup
@@ -62,6 +73,9 @@ Plug 'tpope/vim-speeddating'          " Dates in vim
 Plug 'neovim/nvim-lspconfig'
 Plug 'williamboman/nvim-lsp-installer'
 Plug 'jose-elias-alvarez/null-ls.nvim' " formatters and linters
+
+" Fixer
+Plug 'dense-analysis/ale'
 
 " Autocompletion
 Plug 'neovim/nvim-lspconfig'
@@ -177,7 +191,7 @@ set incsearch                         " enable searching as you type
 
 
 " Formatting
-nnoremap <leader>f :Format<CR>
+nnoremap <leader>f
 
 " Better window management (neovim splits)
 nnoremap <C-h> <C-w>h
@@ -207,7 +221,6 @@ inoremap <Left>  <ESC>:echoe "Use h"<CR>
 inoremap <Right> <ESC>:echoe "Use l"<CR>
 inoremap <Up>    <ESC>:echoe "Use k"<CR>
 inoremap <Down>  <ESC>:echoe "Use j"<CR>
-
 
 " =============================================================================
 " Git
