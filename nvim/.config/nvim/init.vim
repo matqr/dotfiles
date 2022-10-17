@@ -21,11 +21,11 @@ set wildignore+=**/.git/*
 " =============================================================================
 " lsp and linting are done with the lua pluggins, ale is just used as a fixer
 " TODO: get this done with null-ls
-let g:ale_disable_lsp = 1
-let g:ale_fix_on_save = 1 " only perform fixes after saving
-let g:ale_fixers = {
-    \    '*': ['remove_trailing_lines', 'trim_whitespace'],
-    \}
+"let g:ale_disable_lsp = 1
+"let g:ale_fix_on_save = 1 " only perform fixes after saving
+"let g:ale_fixers = {
+"    \    '*': ['remove_trailing_lines', 'trim_whitespace'],
+"    \}
 
 " =============================================================================
 " PLUGINS
@@ -47,7 +47,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }  " FZF plugin,
 Plug 'junegunn/fzf.vim'
 
 " Colors
-Plug 'patstockwell/vim-monokai-tasty'
+"Plug 'patstockwell/vim-monokai-tasty'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 
 " VIM enhancements
 Plug 'ciaranm/securemodelines'
@@ -143,8 +144,9 @@ set expandtab                         " tabs are spaces, mainly because of pytho
 set shiftwidth=4
 set smartindent
 
-let g:vim_molokai_tasty_italic=1
-colorscheme vim-monokai-tasty
+"let g:vim_molokai_tasty_italic=1
+"colorscheme vim-monokai-tasty
+colorscheme tokyonight
 "syntax enable                         "enable syntax processing with color scheme
 
 " The backspace key has slightly unintuitive behavior by default. For example,

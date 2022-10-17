@@ -11,8 +11,9 @@ set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
 
 ## Alias
 # VIM
-alias vim="nvim"
-alias oldvim="vim" 
+#alias vim="nvim"
+alias vim="~/nvim/bin/nvim"
+alias oldvim="vim"
 
 # Git
 alias gal='git add --all'
@@ -45,4 +46,3 @@ set -g fish_user_paths "/usr/local/opt/tcl-tk/bin" $fish_user_paths
 # !! Contents within this block are managed by 'conda init' !!
 eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
-
