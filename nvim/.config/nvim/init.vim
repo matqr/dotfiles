@@ -17,17 +17,6 @@ set wildignore+=**/ios/*
 set wildignore+=**/.git/*
 
 " =============================================================================
-" LSP, linting, fixer
-" =============================================================================
-" lsp and linting are done with the lua pluggins, ale is just used as a fixer
-" TODO: get this done with null-ls
-"let g:ale_disable_lsp = 1
-"let g:ale_fix_on_save = 1 " only perform fixes after saving
-"let g:ale_fixers = {
-"    \    '*': ['remove_trailing_lines', 'trim_whitespace'],
-"    \}
-
-" =============================================================================
 " PLUGINS
 " =============================================================================
 " Install setup
@@ -100,6 +89,8 @@ Plug 'andymass/vim-matchup'
 Plug 'numtoStr/Comment.nvim'
 
 " Treesitter
+" https://github.com/nvim-treesitter/nvim-treesitter
+" Provide some highlightings for tree/nested code
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 Plug 'JoosepAlviste/nvim-ts-context-commentstring'
@@ -125,7 +116,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-
 call plug#end()
 
 " https://github.com/awesome-streamers/awesome-streamerrc/tree/master/ThePrimeagen
@@ -144,8 +134,6 @@ set expandtab                         " tabs are spaces, mainly because of pytho
 set shiftwidth=4
 set smartindent
 
-"let g:vim_molokai_tasty_italic=1
-"colorscheme vim-monokai-tasty
 colorscheme tokyonight
 "syntax enable                         "enable syntax processing with color scheme
 
@@ -209,8 +197,8 @@ inoremap <A-k> <Esc>:m .-2<CR>==gi
 vnoremap <A-j> :m '>+1<CR>gv=gv
 vnoremap <A-k> :m '<-2<CR>gv=gv
 
-" Avoid keeping deleted stuff on clipboard
-"vnoremap <p> "_dP # TODO not working
+" Avoid keeping deleted stuff on clipboard TODO not really working
+xnoremap("<leader>p", "\"_dP") 
 
 " Prevent bad habits of using arrows
 " Do this in normal mode...
