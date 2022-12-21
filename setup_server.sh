@@ -7,7 +7,7 @@
 # Dont link DS_Store files
 find . -name ".DS_Store" -exec rm {} \;
 
-PROGRAMS=(alias keybinding git stow nvim)
+PROGRAMS=(keybinding git stow nvim)
 
 function backup_if_exists() {
     if [ -f $1 ];
@@ -40,7 +40,3 @@ done
 
 echo "Done!"
 
-if [ -f ~/.aliases ]; then
-  echo "Launching aliases"
-  source ~/.aliases
-fi

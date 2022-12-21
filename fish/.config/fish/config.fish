@@ -11,8 +11,7 @@ set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
 
 ## Alias
 # VIM
-#alias vim="nvim"
-alias vim="~/nvim/bin/nvim"
+alias vim="/usr/local/bin/nvim"
 alias oldvim="vim"
 
 # Git
