@@ -11,7 +11,7 @@ find . -name ".DS_Store" -exec rm {} \;
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-# dependencies
+# dependencies for lua and neovim
 brew install lua
 brew install ripgrep
 brew install fd

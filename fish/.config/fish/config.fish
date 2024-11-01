@@ -4,7 +4,6 @@ set -xU LSCOLORS gxdxcxdxbxegedabaggxgx
 LS >/dev/null
 
 ## Paths
-#source "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
 if status is-interactive
     # Add Homebrew to PATH for ARM Macs
     eval (/opt/homebrew/bin/brew shellenv)
@@ -15,9 +14,8 @@ if status is-interactive
     end
 end
 
-#status --is-interactive; and source (rbenv init -|psub)
+set -gx PATH /Users/mquintana/miniforge3/bin $PATH
 set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
-#set -gx PATH /opt/homebrew/bin/tmux $PATH
 
 ## Alias
 # VIM
@@ -53,10 +51,6 @@ alias jn-b="jupyter notebook --no-browser"
 function fish_greeting
 end
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source
-# <<< conda initialize <<<
-
-# Created by `pipx` on 2024-10-30 08:54:07
-set PATH $PATH /Users/mquintana/.local/bin
+# conda
+source /Users/mquintana/miniforge3/etc/fish/conf.d/conda.fish
+#eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source
