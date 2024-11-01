@@ -11,7 +11,12 @@ find . -name ".DS_Store" -exec rm {} \;
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
-# Go into packer.lua and :PackageSync
+# dependencies
+brew install lua
+brew install ripgrep
+brew install fd
+brew install tree-sitter
+# Go into packer.lua and do :so then :PackageSync
 
 PROGRAMS=(bash git stow nvim ssh fish alacritty tmux)
 

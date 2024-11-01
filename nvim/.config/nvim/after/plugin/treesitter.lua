@@ -1,3 +1,5 @@
+vim.opt.runtimepath:append("/opt/homebrew/bin") -- add homebrew binaries to ensure runtimepath
+
 require 'nvim-treesitter.configs'.setup {
     -- A list of parser names, or "all"
     ensure_installed = { "vimdoc", "javascript", "typescript", "python", "c", "cpp", "lua", "rust" },
