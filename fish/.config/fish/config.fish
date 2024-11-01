@@ -1,18 +1,31 @@
 ## Display
-source ~/.profile;clear;
+#source ~/.profile;clear;
 set -xU LSCOLORS gxdxcxdxbxegedabaggxgx
 LS >/dev/null
 
 ## Paths
-set PATH /Users/maqr/miniconda3/bin $PATH
 #source "$HOME/miniconda3/etc/fish/conf.d/conda.fish"
-status --is-interactive; and source (rbenv init -|psub)
-set -g fish_user_paths "/usr/local/opt/ruby/bin" $fish_user_paths
+if status is-interactive
+    # Add Homebrew to PATH for ARM Macs
+    eval (/opt/homebrew/bin/brew shellenv)
+
+    # rbenv
+    if type -q rbenv
+        rbenv init - fish | source
+    end
+end
+
+#status --is-interactive; and source (rbenv init -|psub)
+set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
+#set -gx PATH /opt/homebrew/bin/tmux $PATH
 
 ## Alias
 # VIM
-alias vim="/usr/local/bin/nvim"
+alias vim="/opt/homebrew/bin/nvim"
 alias oldvim="vim"
+
+# tmux
+#alias tmux='/opt/homebrew/bin/tmux'
 
 # Git
 alias gal='git add --all'
@@ -39,9 +52,11 @@ alias jn-b="jupyter notebook --no-browser"
 # No greeting when starting an interactive shell.
 function fish_greeting
 end
-set -g fish_user_paths "/usr/local/opt/tcl-tk/bin" $fish_user_paths
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
 eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source
 # <<< conda initialize <<<
+
+# Created by `pipx` on 2024-10-30 08:54:07
+set PATH $PATH /Users/mquintana/.local/bin

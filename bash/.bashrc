@@ -1,7 +1,10 @@
 # Environment setup
 set fish_greeting # no start up message
 
+# For arm terminal
+#arch -arm64 /opt/homebrew/bin/fish
 # Aliases (if using fish shell copy them over fish_aliases)
+
 if [ -f ~/.aliases ]; then
     source ~/.aliases
 fi
@@ -19,7 +22,6 @@ export VISUAL='nvim'
 export PATH="~/anaconda3/bin:$PATH"
 
 # added by Miniconda3 installer
-#/Users/matias
 export PATH="~/miniconda3/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
