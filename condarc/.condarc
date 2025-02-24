@@ -1,0 +1,9 @@
+create_default_packages:
+  - numpy
+  - pandas
+  - matplotlib
+  - scipy
+  - ipykernel
+  - seaborn
+  - scikit-learn
+  - ipywidgets

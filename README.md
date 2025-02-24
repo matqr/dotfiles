@@ -6,6 +6,7 @@ Custom configuration files for
 - alacritty
 - bash
 - git
+- conda
 - nvim
 - stow
 - vim
