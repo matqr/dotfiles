@@ -25,3 +25,5 @@ export PATH="~/anaconda3/bin:$PATH"
 export PATH="~/miniconda3/bin:$PATH"
 
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
+
+. "$HOME/.local/bin/env"
