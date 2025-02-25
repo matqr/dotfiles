@@ -31,3 +31,4 @@ vim.opt.updatetime = 50
 vim.opt.colorcolumn = "80"
 
 vim.g.mapleader = " "
+vim.g.python3_host_prog = '/opt/homebrew/bin/python3'
