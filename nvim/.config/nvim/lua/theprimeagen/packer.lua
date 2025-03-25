@@ -1,4 +1,4 @@
- -- This file can be loaded by calling `lua require('plugins')` from your init.vim
+-- This file can be loaded by calling `lua require('plugins')` from your init.vim
 
 -- Only required if you have packer configured as `opt`
 vim.cmd.packadd('packer.nvim')
@@ -7,13 +7,17 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
 
+    -- color theme
+    use 'Mofiqul/dracula.nvim'
+
+    -- telescope
     use {
-    'nvim-telescope/telescope.nvim',
-    requires = {
-        {'nvim-lua/plenary.nvim'},
-        {'nvim-tree/nvim-web-devicons', opt = true}
-    },
-    tag = '0.1.4'  -- Use the latest stable version
+        'nvim-telescope/telescope.nvim',
+        requires = {
+            { 'nvim-lua/plenary.nvim' },
+            { 'nvim-tree/nvim-web-devicons', opt = true }
+        },
+        tag = '0.1.4' -- Use the latest stable version
     }
     use({
         'rose-pine/neovim',
@@ -23,13 +27,19 @@ return require('packer').startup(function(use)
         end
     })
 
+    -- treesitter
     use('nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' })
     use('nvim-treesitter/nvim-treesitter-context')
     use('nvim-treesitter/playground')
+
+    -- harpoon (for better file jumping)
     use('theprimeagen/harpoon')
+
+    -- extra
     use('mbbill/undotree')
     use('tpope/vim-fugitive')
 
+    -- lsp
     use {
         'VonHeikemen/lsp-zero.nvim',
         requires = {
@@ -57,5 +67,5 @@ return require('packer').startup(function(use)
     use 'lewis6991/gitsigns.nvim'
 
     use 'nvim-lualine/lualine.nvim' -- Fancier statusline
-    use 'numToStr/Comment.nvim' -- "gc" to comment visual regions/lines
+    use 'numToStr/Comment.nvim'     -- "gc" to comment visual regions/lines
 end)
