@@ -10,6 +10,7 @@ Custom configuration files for
 - nvim
 - stow
 - vim
+- yabai
 
 Clone into `~/.dotfiles`
 
@@ -18,7 +19,15 @@ E.g. `config.fish` should be place in `~/.config/fish/`, thus this same folder s
 
 For aliases in fish, copy them into `config/fish`
 
-Lots of stuff copied over from [ThePrimeagen](https://github.com/awesome-streamers/awesome-streamerrc/tree/master/ThePrimeagen)
+Lots of stuff copied over from [ThePrimeagen](https://github.com/awesome-streamers/awesome-streamerrc/tree/master/ThePrimeagen).
+
+# [Yabai](https://github.com/koekeishiya/yabai) (tile manager)
+Content copied from [here](https://www.josean.com/posts/yabai-setup).
+For switching spaces (Mission conrol), replace the shortcuts for `opt+number` as it is more comfortable.
+
+## Requirements
+- Disable SIP
+- Configure [scripting addition](https://github.com/koekeishiya/yabai/wiki/Installing-yabai-(latest-release))
 
 # Tips
 

@@ -18,7 +18,7 @@ brew install fd
 brew install tree-sitter
 # Go into packer.lua and do :so then :PackageSync
 
-PROGRAMS=(stow bash git condarc nvim ssh fish alacritty tmux)
+PROGRAMS=(stow bash git condarc nvim ssh fish alacritty tmux yabai skhd)
 
 function backup_if_exists() {
     if [ -f $1 ];
