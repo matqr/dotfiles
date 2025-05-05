@@ -8,6 +8,8 @@ alt - l : yabai -m window --focus east
 ## Change focus between displays
 alt - w: yabai -m display --focus north
 alt - s: yabai -m display --focus south
+alt - a: yabai -m display --focus west
+alt - d: yabai -m display --focus east
 
 ## Modifying layout
 # rotate layout clockwise
