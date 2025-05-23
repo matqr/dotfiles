@@ -10,6 +10,7 @@ Custom configuration files for
 - nvim
 - stow
 - vim
+- aerospace
 
 Clone into `~/.dotfiles`
 
