@@ -242,3 +242,7 @@ run = "move-node-to-workspace F"
 if.app-id = 'com.rstudio.desktop'
 run = "move-node-to-workspace R"
 
+[[on-window-detected]] # Spotify
+if.app-id = 'com.spotify.client'
+run = "move-node-to-workspace Y"
+
