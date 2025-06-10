@@ -222,8 +222,8 @@ run = "move-node-to-workspace M"
 if.app-id = 'com.sublimetext.4'
 run = "move-node-to-workspace N"
 
-[[on-window-detected]] # Papers
-if.app-id = 'com.ReadCube.Papers'
+[[on-window-detected]] # Ref/papers manager
+if.app-id = 'org.zotero.zotero'
 run = "move-node-to-workspace P"
 
 [[on-window-detected]] # WhatsApp
