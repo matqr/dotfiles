@@ -207,9 +207,13 @@ run = "move-node-to-workspace 2"
 if.app-id = 'com.microsoft.Word'
 run = "move-node-to-workspace 3"
 
+[[on-window-detected]] # Excel
+if.app-id = 'com.microsoft.Excel'
+run = "move-node-to-workspace 4"
+
 [[on-window-detected]] # Teams
 if.app-id = 'com.microsoft.teams2'
-run = "move-node-to-workspace 4"
+run = "move-node-to-workspace 5"
 
 [[on-window-detected]] # Thunderbird
 if.app-id = 'org.mozilla.thunderbird'
@@ -270,5 +274,4 @@ run = "move-node-to-workspace Y"
 [[on-window-detected]] # Zoom
 if.app-id = 'us.zoom.xos'
 run = "move-node-to-workspace Z"
-
 
