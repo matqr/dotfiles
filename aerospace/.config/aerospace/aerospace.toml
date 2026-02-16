@@ -200,7 +200,7 @@ if.app-id = 'com.apple.Preview'
 run = "move-node-to-workspace 1"
 
 [[on-window-detected]] # Keynote
-if.app-id = 'com.apple.iWork.Keynote'
+if.app-id = 'com.apple.Keynote'
 run = "move-node-to-workspace 2"
 
 [[on-window-detected]] # Word
