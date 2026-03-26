@@ -215,6 +215,10 @@ run = "move-node-to-workspace 4"
 if.app-id = 'com.microsoft.teams2'
 run = "move-node-to-workspace 5"
 
+[[on-window-detected]] # KeePassXC
+if.app-id = 'org.keepassxc.keepassxc'
+run = "move-node-to-workspace 9"
+
 [[on-window-detected]] # Thunderbird
 if.app-id = 'org.mozilla.thunderbird'
 run = "move-node-to-workspace A"
