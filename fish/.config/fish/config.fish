@@ -14,7 +14,7 @@ if status is-interactive
     end
 end
 
-set -gx PATH /Users/mquintana/miniforge3/bin $PATH
+set -gx PATH $HOME/miniforge3/bin $PATH
 set -g fish_user_paths "/opt/homebrew/bin" $fish_user_paths
 
 ## Alias
@@ -52,8 +52,8 @@ function fish_greeting
 end
 
 # conda
-source /Users/mquintana/miniforge3/etc/fish/conf.d/conda.fish
-#eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+if test -f $HOME/miniforge3/etc/fish/conf.d/conda.fish
+    source $HOME/miniforge3/etc/fish/conf.d/conda.fish
+end
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mquintana/Developer/paper__geogaslighting/google-cloud-sdk/path.fish.inc' ]; . '/Users/mquintana/Developer/paper__geogaslighting/google-cloud-sdk/path.fish.inc'; end
+#eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source

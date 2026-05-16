@@ -7,16 +7,22 @@ set -x          # Enable verbosity
 # Dont link DS_Store files
 find . -name ".DS_Store" -exec rm {} \;
 
-# Install neovim package manager packer
-git clone --depth 1 https://github.com/wbthomason/packer.nvim\
- ~/.local/share/nvim/site/pack/packer/start/packer.nvim
-
-# dependencies for lua and neovim
+# install dependencies
 brew install lua
 brew install ripgrep
 brew install fd
 brew install tree-sitter
-# Go into packer.lua and do :so then :PackageSync
+brew install fzf
+brew install neovim
+brew install tmux
+brew install --cask font-hack-nerd-font
+
+# Install fisher and fish plugins
+curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
+fisher update
+
+# NOTE: if using conda/miniforge install separately:
+# brew install --cask miniforge && conda init fish
 
 PROGRAMS=(stow bash git condarc nvim ssh fish alacritty tmux aerospace)
 
@@ -41,5 +47,9 @@ for program in ${PROGRAMS[@]}; do
   stow -v $program
   echo "Configuring $program"
 done
+
+# Fix fzf fish symlink
+rm -f ~/.config/fish/functions/fzf_key_bindings.fish
+ln -s $(brew --prefix fzf)/shell/key-bindings.fish ~/.config/fish/functions/fzf_key_bindings.fish
 
 echo "Done!"
