@@ -51,9 +51,17 @@ alias jn-b="jupyter notebook --no-browser"
 function fish_greeting
 end
 
-# conda
-if test -f $HOME/miniforge3/etc/fish/conf.d/conda.fish
-    source $HOME/miniforge3/etc/fish/conf.d/conda.fish
-end
 
-#eval /opt/miniconda3/bin/conda "shell.fish" "hook" $argv | source
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+if test -f /opt/homebrew/Caskroom/miniforge/base/bin/conda
+    eval /opt/homebrew/Caskroom/miniforge/base/bin/conda "shell.fish" "hook" $argv | source
+else
+    if test -f "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
+        . "/opt/homebrew/Caskroom/miniforge/base/etc/fish/conf.d/conda.fish"
+    else
+        set -x PATH "/opt/homebrew/Caskroom/miniforge/base/bin" $PATH
+    end
+end
+# <<< conda initialize <<<
+

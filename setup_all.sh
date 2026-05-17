@@ -21,8 +21,9 @@ brew install --cask font-hack-nerd-font
 curl -sL https://raw.githubusercontent.com/jorgebucaran/fisher/main/functions/fisher.fish | source && fisher install jorgebucaran/fisher
 fisher update
 
-# NOTE: if using conda/miniforge install separately:
-# brew install --cask miniforge && conda init fish
+# install conda
+brew install --cask miniforge
+conda init fish
 
 PROGRAMS=(stow bash git condarc nvim ssh fish alacritty tmux aerospace)
 
