@@ -219,10 +219,6 @@ run = "move-node-to-workspace 5"
 if.app-id = 'org.keepassxc.keepassxc'
 run = "move-node-to-workspace 9"
 
-[[on-window-detected]] # Thunderbird
-if.app-id = 'org.mozilla.thunderbird'
-run = "move-node-to-workspace A"
-
 [[on-window-detected]] # Browser
 if.app-id = 'com.brave.Browser'
 run = "move-node-to-workspace B"

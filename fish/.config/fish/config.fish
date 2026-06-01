@@ -65,3 +65,4 @@ else
 end
 # <<< conda initialize <<<
 
+export PATH="$HOME/.local/bin:$PATH"
